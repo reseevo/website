@@ -1,0 +1,85 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background: #020813;
+  color: #ffffff;
+}
+
+.sector-page {
+  min-height: 70vh;
+  background:
+    radial-gradient(circle at 80% 20%, rgba(122, 92, 255, 0.28), transparent 24rem),
+    linear-gradient(135deg, #030914, #07182d);
+}
+
+.sector-page__hero,
+.sector-page__focus {
+  width: min(960px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.sector-page__hero {
+  padding: 6rem 0 3rem;
+}
+
+.sector-page__hero p {
+  margin: 0 0 1rem;
+  color: #9aa7ff;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+h1 {
+  max-width: 48rem;
+  margin: 0;
+  font-size: clamp(2.7rem, 6vw, 5rem);
+  line-height: 1;
+}
+
+.sector-page__hero > span {
+  display: block;
+  max-width: 42rem;
+  margin-top: 1rem;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.sector-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.8rem;
+}
+
+.sector-page__focus {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  padding-bottom: 5rem;
+}
+
+.sector-page__focus article {
+  padding: 1.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.sector-page__focus strong,
+.sector-page__focus span {
+  display: block;
+}
+
+.sector-page__focus span {
+  margin-top: 0.55rem;
+  color: rgba(255, 255, 255, 0.68);
+}
+
+@media (max-width: 720px) {
+  .sector-page__focus {
+    grid-template-columns: 1fr;
+  }
+}

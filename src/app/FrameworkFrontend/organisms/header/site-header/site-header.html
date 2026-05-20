@@ -1,0 +1,39 @@
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__brand" routerLink="/" aria-label="Vai alla homepage ReSeevo" (click)="closeMenu()">
+      <app-brand-logo />
+    </a>
+
+    <button
+      class="site-header__toggle"
+      type="button"
+      [attr.aria-expanded]="isMenuOpen"
+      aria-controls="main-navigation"
+      aria-label="Apri menu"
+      (click)="toggleMenu()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav id="main-navigation" class="site-header__nav" [class.is-open]="isMenuOpen" aria-label="Navigazione principale">
+      @for (item of navItems; track item.label) {
+        @if (item.href.startsWith('#')) {
+          <a [href]="item.href" (click)="closeMenu()">{{ item.label }}</a>
+        } @else {
+          <a [routerLink]="item.href" (click)="closeMenu()">{{ item.label }}</a>
+        }
+      }
+      <div class="site-header__mobile-actions">
+        <app-cta-button label="Richiedi una demo" href="#demo" />
+        <app-cta-button label="Accedi" href="#login" variant="secondary" />
+      </div>
+    </nav>
+
+    <div class="site-header__actions">
+      <app-cta-button label="Richiedi una demo" href="#demo" />
+      <a class="site-header__login" href="#login">Accedi</a>
+    </div>
+  </div>
+</header>

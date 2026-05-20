@@ -1,0 +1,42 @@
+.feature-card {
+  min-height: 12rem;
+  padding: 1.7rem 1.35rem;
+  border: 1px solid rgba(92, 112, 143, 0.16);
+  border-radius: 1.15rem;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.08);
+  text-align: center;
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(86, 95, 255, 0.28);
+  box-shadow: 0 30px 70px rgba(51, 72, 128, 0.14);
+}
+
+.feature-card__icon {
+  display: grid;
+  width: 3.35rem;
+  height: 3.35rem;
+  margin: 0 auto 1rem;
+  place-items: center;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, rgba(38, 119, 255, 0.1), rgba(122, 92, 255, 0.15));
+  color: #4d4cff;
+  font-size: 1.7rem;
+  font-weight: 900;
+}
+
+h3 {
+  margin: 0;
+  color: #08111f;
+  font-size: 1rem;
+}
+
+p {
+  margin: 0.65rem 0 0;
+  color: #526070;
+  font-size: 0.92rem;
+  line-height: 1.55;
+}

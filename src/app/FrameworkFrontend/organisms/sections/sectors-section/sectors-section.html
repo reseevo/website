@@ -1,0 +1,22 @@
+<section id="sectors" class="sectors-section">
+  <div class="section-heading section-heading--dark">
+    <h2>La soluzione ideale per ogni settore</h2>
+    <p>Ogni attivita ha esigenze diverse. ReSeevo mantiene coerenza globale e percorsi dedicati.</p>
+  </div>
+
+  <div class="sectors-section__grid">
+    @for (sector of sectors; track sector.title) {
+      <app-sector-card
+        [title]="sector.title"
+        [description]="sector.description"
+        [route]="sector.route"
+        [tone]="sector.tone"
+        [icon]="sector.icon"
+      />
+    }
+  </div>
+
+  <div class="sectors-section__action">
+    <app-cta-button label="Esplora tutti i settori" href="/sectors" variant="secondary" />
+  </div>
+</section>

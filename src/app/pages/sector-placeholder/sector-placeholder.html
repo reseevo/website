@@ -1,0 +1,22 @@
+<app-site-header />
+<main class="sector-page">
+  <section class="sector-page__hero">
+    <p>Pagina settore in preparazione</p>
+    <h1>{{ content().title }}</h1>
+    <span>{{ content().subtitle }}</span>
+    <div class="sector-page__actions">
+      <app-cta-button label="Torna alla homepage" href="/" />
+      <app-cta-button label="Richiedi una demo" href="#contact" variant="secondary" />
+    </div>
+  </section>
+
+  <section class="sector-page__focus" aria-label="Focus futuri">
+    @for (item of content().focus; track item) {
+      <article>
+        <strong>{{ item }}</strong>
+        <span>Placeholder per contenuti, tutorial e visual dedicati.</span>
+      </article>
+    }
+  </section>
+</main>
+<app-site-footer />

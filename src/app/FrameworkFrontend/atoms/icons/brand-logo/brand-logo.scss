@@ -1,0 +1,43 @@
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: #ffffff;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+
+.brand-logo__mark {
+  position: relative;
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  place-items: center;
+  border-radius: 0.8rem;
+  background:
+    radial-gradient(circle at 72% 24%, #b7d7ff 0 10%, transparent 11%),
+    conic-gradient(from 210deg, #2d7cff, #6c5cff, #25d0ff, #2d7cff);
+  box-shadow: 0 12px 32px rgba(38, 119, 255, 0.42);
+}
+
+.brand-logo__mark::before {
+  position: absolute;
+  inset: 0.38rem;
+  border-radius: 0.55rem;
+  background: rgba(5, 13, 26, 0.9);
+  content: "";
+}
+
+.brand-logo__mark span {
+  position: relative;
+  width: 0.9rem;
+  height: 0.9rem;
+  border: 0.22rem solid #ffffff;
+  border-top-color: transparent;
+  border-left-color: rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+}
+
+.brand-logo__text {
+  font-size: 1.45rem;
+}

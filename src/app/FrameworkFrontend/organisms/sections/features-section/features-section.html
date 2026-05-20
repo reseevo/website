@@ -1,0 +1,12 @@
+<section id="features" class="features-section">
+  <div class="section-heading">
+    <h2>Tutto cio che ti serve, in un'unica piattaforma</h2>
+    <p>Funzionalita pensate per semplificare gestione, prenotazioni e crescita della tua attivita.</p>
+  </div>
+
+  <div class="features-section__grid">
+    @for (feature of features; track feature.title) {
+      <app-feature-card [icon]="feature.icon" [title]="feature.title" [description]="feature.description" />
+    }
+  </div>
+</section>

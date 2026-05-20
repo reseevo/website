@@ -1,0 +1,45 @@
+.tutorials-section {
+  padding: 4rem max(1rem, calc((100% - 1160px) / 2));
+  background: #ffffff;
+}
+
+.section-heading {
+  max-width: 42rem;
+  margin: 0 auto 2rem;
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+  color: #07111f;
+  font-size: clamp(2rem, 3.2vw, 3rem);
+}
+
+p {
+  margin: 0.5rem 0 0;
+  color: #526070;
+}
+
+.tutorials-section__grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1.4rem;
+}
+
+.tutorials-section__action {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.4rem;
+}
+
+@media (max-width: 980px) {
+  .tutorials-section__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 580px) {
+  .tutorials-section__grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,44 @@
+<section class="hero-section" aria-labelledby="hero-title">
+  <div class="hero-section__glow" aria-hidden="true"></div>
+  <div class="hero-section__inner">
+    <div class="hero-section__copy">
+      <p class="section-kicker">Gestionale all-in-one</p>
+      <h1 id="hero-title">Prenotazioni. Organizzazione. <span>Crescita.</span></h1>
+      <p class="hero-section__lead">
+        ReSeevo semplifica la gestione della tua attivita: prenotazioni, clienti,
+        calendario e dashboard in un'unica esperienza moderna.
+      </p>
+
+      <div class="hero-section__actions">
+        <app-cta-button label="Richiedi una demo gratuita" href="#demo" />
+        <app-cta-button label="Scopri di piu" href="#features" variant="secondary" />
+      </div>
+
+      <div class="hero-section__trust" aria-label="Indicatori di fiducia">
+        @for (item of trustItems; track item) {
+          <span>{{ item }}</span>
+        }
+      </div>
+    </div>
+
+    <figure class="hero-section__product">
+      <img
+        src="assets/mockups/view-gestional.png?v=20260520-1424"
+        alt="Anteprima della dashboard gestionale ReSeevo"
+        width="1040"
+        height="690"
+        loading="eager"
+        fetchpriority="high"
+      />
+    </figure>
+
+    <div class="hero-section__brands" aria-label="Esempi di settori supportati">
+      <span>Scelto da attivita moderne</span>
+      <div>
+        @for (brand of brandExamples; track brand) {
+          <strong>{{ brand }}</strong>
+        }
+      </div>
+    </div>
+  </div>
+</section>

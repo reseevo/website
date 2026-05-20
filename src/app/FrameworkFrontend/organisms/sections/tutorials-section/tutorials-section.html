@@ -1,0 +1,21 @@
+<section id="tutorial" class="tutorials-section">
+  <div class="section-heading">
+    <h2>Tutorial: impara in pochi minuti</h2>
+    <p>Video brevi e pratici per scoprire le funzionalita principali di ReSeevo.</p>
+  </div>
+
+  <div class="tutorials-section__grid">
+    @for (tutorial of tutorials; track tutorial.index) {
+      <app-tutorial-card
+        [index]="tutorial.index"
+        [title]="tutorial.title"
+        [duration]="tutorial.duration"
+        [tone]="tutorial.tone"
+      />
+    }
+  </div>
+
+  <div class="tutorials-section__action">
+    <app-cta-button label="Vedi tutti i tutorial" href="#tutorial" variant="ghost" />
+  </div>
+</section>

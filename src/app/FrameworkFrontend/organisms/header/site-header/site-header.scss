@@ -1,0 +1,122 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 30;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(3, 9, 20, 0.82);
+  backdrop-filter: blur(18px);
+}
+
+.site-header__inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1.4rem;
+  align-items: center;
+  width: min(1160px, calc(100% - 2rem));
+  min-height: 4.6rem;
+  margin: 0 auto;
+}
+
+.site-header__brand {
+  text-decoration: none;
+}
+
+.site-header__nav {
+  display: flex;
+  justify-content: center;
+  gap: 1.7rem;
+}
+
+.site-header__nav a,
+.site-header__login {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 0.88rem;
+  font-weight: 800;
+  text-decoration: none;
+  transition: color 160ms ease;
+}
+
+.site-header__nav a:hover,
+.site-header__login:hover {
+  color: #ffffff;
+}
+
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.site-header__login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.9rem;
+  padding: 0 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 0.8rem;
+}
+
+.site-header__toggle,
+.site-header__mobile-actions {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .site-header__inner {
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+  }
+
+  .site-header__toggle {
+    display: grid;
+    gap: 0.28rem;
+    width: 2.7rem;
+    height: 2.7rem;
+    place-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 0.75rem;
+    background: rgba(255, 255, 255, 0.06);
+  }
+
+  .site-header__toggle span {
+    display: block;
+    width: 1.1rem;
+    height: 2px;
+    border-radius: 99px;
+    background: #ffffff;
+  }
+
+  .site-header__nav {
+    position: absolute;
+    top: 4.6rem;
+    right: 1rem;
+    left: 1rem;
+    display: none;
+    flex-direction: column;
+    gap: 0.2rem;
+    padding: 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1rem;
+    background: rgba(6, 14, 30, 0.96);
+    box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+  }
+
+  .site-header__nav.is-open {
+    display: flex;
+  }
+
+  .site-header__nav a {
+    padding: 0.8rem;
+  }
+
+  .site-header__actions {
+    display: none;
+  }
+
+  .site-header__mobile-actions {
+    display: grid;
+    gap: 0.7rem;
+    padding-top: 0.7rem;
+  }
+}

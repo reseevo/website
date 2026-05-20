@@ -1,0 +1,29 @@
+<footer id="contact" class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <app-brand-logo />
+      <p>Il gestionale intelligente per prenotazioni e attivita moderne. Semplice, ordinato, scalabile.</p>
+      <div class="site-footer__social" aria-label="Social placeholder">
+        <a href="#contact">in</a>
+        <a href="#contact">ig</a>
+        <a href="#contact">yt</a>
+      </div>
+    </div>
+
+    <div class="site-footer__columns">
+      @for (column of columns; track column.title) {
+        <nav [attr.aria-label]="column.title">
+          <strong>{{ column.title }}</strong>
+          @for (link of column.links; track link) {
+            <a href="#contact">{{ link }}</a>
+          }
+        </nav>
+      }
+    </div>
+
+    <div class="site-footer__bottom">
+      <span>© 2026 ReSeevo. Contenuti e dati aziendali definitivi da validare.</span>
+      <span>Italiano</span>
+    </div>
+  </div>
+</footer>

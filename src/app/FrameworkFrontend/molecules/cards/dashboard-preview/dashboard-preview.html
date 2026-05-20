@@ -1,0 +1,85 @@
+<div class="dashboard-shell" aria-label="Anteprima dashboard gestionale ReSeevo">
+  <div class="dashboard-shell__chrome">
+    <span></span>
+    <span></span>
+  </div>
+
+  <aside class="dashboard-sidebar">
+    <strong>ReSeevo</strong>
+    <nav aria-label="Menu gestionale preview">
+      <span class="is-active">Dashboard</span>
+      <span>Prenotazioni</span>
+      <span>Calendario</span>
+      <span>Clienti</span>
+      <span>Marketing</span>
+      <span>Report</span>
+    </nav>
+  </aside>
+
+  <section class="dashboard-main">
+    <div class="dashboard-main__heading">
+      <div>
+        <span>Dashboard</span>
+        <h2>Agenda intelligente</h2>
+      </div>
+      <span class="dashboard-main__status">Live</span>
+    </div>
+
+    <div class="kpi-grid">
+      @for (kpi of kpis; track kpi.label) {
+        <article class="kpi-card">
+          <span>{{ kpi.label }}</span>
+          <strong>{{ kpi.value }}</strong>
+          <em>{{ kpi.trend }} vs ieri</em>
+        </article>
+      }
+    </div>
+
+    <div class="dashboard-content">
+      <article class="agenda-card">
+        <div class="agenda-card__head">
+          <strong>Agenda di oggi</strong>
+          <span>15 Maggio</span>
+        </div>
+        @for (booking of bookings; track booking.time) {
+          <div class="booking-row">
+            <span>{{ booking.time }}</span>
+            <div [class]="'booking-row__event booking-row__event--' + booking.tone">
+              <strong>{{ booking.title }}</strong>
+              <small>{{ booking.room }}</small>
+            </div>
+          </div>
+        }
+      </article>
+
+      <article class="next-card">
+        <div class="agenda-card__head">
+          <strong>Prossime prenotazioni</strong>
+          <a href="#tutorial">Vedi tutte</a>
+        </div>
+        @for (booking of nextBookings; track booking.name) {
+          <div class="next-booking">
+            <span aria-hidden="true">{{ booking.name.slice(0, 1) }}</span>
+            <div>
+              <strong>{{ booking.name }}</strong>
+              <small>{{ booking.service }}</small>
+            </div>
+            <em>{{ booking.time }}</em>
+          </div>
+        }
+      </article>
+    </div>
+  </section>
+</div>
+
+<div class="mobile-preview" aria-label="Anteprima futura app mobile ReSeevo">
+  <div class="mobile-preview__speaker"></div>
+  <strong>Nuova prenotazione</strong>
+  <span>Seleziona servizio</span>
+  <div class="mobile-preview__list">
+    <span>Lezione di Padel</span>
+    <span>Personal Training</span>
+    <span>Taglio Uomo</span>
+  </div>
+  <button type="button">Continua</button>
+</div>
