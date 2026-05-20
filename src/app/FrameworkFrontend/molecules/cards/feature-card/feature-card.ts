@@ -6,7 +6,6 @@ import { Component, Input } from '@angular/core';
   styleUrl: './feature-card.scss'
 })
 export class FeatureCard {
-  @Input({ required: true }) icon = '';
   @Input({ required: true }) title = '';
   @Input({ required: true }) description = '';
 }

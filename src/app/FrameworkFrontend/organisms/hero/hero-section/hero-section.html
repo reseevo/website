@@ -1,4 +1,4 @@
-<section class="hero-section" aria-labelledby="hero-title">
+<section id="home" class="hero-section" aria-labelledby="hero-title">
   <div class="hero-section__glow" aria-hidden="true"></div>
   <div class="hero-section__inner">
     <div class="hero-section__copy">
@@ -14,11 +14,6 @@
         <app-cta-button label="Scopri di piu" href="#features" variant="secondary" />
       </div>
 
-      <div class="hero-section__trust" aria-label="Indicatori di fiducia">
-        @for (item of trustItems; track item) {
-          <span>{{ item }}</span>
-        }
-      </div>
     </div>
 
     <figure class="hero-section__product">
@@ -31,14 +26,5 @@
         fetchpriority="high"
       />
     </figure>
-
-    <div class="hero-section__brands" aria-label="Esempi di settori supportati">
-      <span>Scelto da attivita moderne</span>
-      <div>
-        @for (brand of brandExamples; track brand) {
-          <strong>{{ brand }}</strong>
-        }
-      </div>
-    </div>
   </div>
 </section>

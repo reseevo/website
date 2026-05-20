@@ -6,7 +6,7 @@
 
   <div class="features-section__grid">
     @for (feature of features; track feature.title) {
-      <app-feature-card [icon]="feature.icon" [title]="feature.title" [description]="feature.description" />
+      <app-feature-card [title]="feature.title" [description]="feature.description" />
     }
   </div>
 </section>

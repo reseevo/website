@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { CtaButton } from '../../../atoms/buttons/cta-button/cta-button';
 import { SectorCard } from '../../../molecules/cards/sector-card/sector-card';
 
 @Component({
   selector: 'app-sectors-section',
-  imports: [SectorCard, CtaButton],
+  imports: [SectorCard],
   templateUrl: './sectors-section.html',
   styleUrl: './sectors-section.scss'
 })
@@ -46,11 +45,11 @@ export class SectorsSection {
       icon: 'T'
     },
     {
-      title: 'Altri settori',
-      description: 'Per business che lavorano su appuntamenti, slot o clienti.',
-      route: '/sectors',
-      tone: 'other',
-      icon: '+'
+      title: 'Ristorazione',
+      description: 'Prenotazioni tavoli, turni, sale e flussi di servizio piu ordinati.',
+      route: '/ristorazione',
+      tone: 'ristorazione',
+      icon: 'R'
     }
   ];
 }

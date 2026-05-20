@@ -4,6 +4,7 @@ import { SiteHeader } from '../../FrameworkFrontend/organisms/header/site-header
 import { HeroSection } from '../../FrameworkFrontend/organisms/hero/hero-section/hero-section';
 import { FeaturesSection } from '../../FrameworkFrontend/organisms/sections/features-section/features-section';
 import { FinalCtaSection } from '../../FrameworkFrontend/organisms/sections/final-cta-section/final-cta-section';
+import { ContactSection } from '../../FrameworkFrontend/organisms/sections/contact-section/contact-section';
 import { SectorsSection } from '../../FrameworkFrontend/organisms/sections/sectors-section/sectors-section';
 import { TutorialsSection } from '../../FrameworkFrontend/organisms/sections/tutorials-section/tutorials-section';
 
@@ -16,6 +17,7 @@ import { TutorialsSection } from '../../FrameworkFrontend/organisms/sections/tut
     SectorsSection,
     TutorialsSection,
     FinalCtaSection,
+    ContactSection,
     SiteFooter
   ],
   templateUrl: './dashboard-home.html',

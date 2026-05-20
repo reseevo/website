@@ -24,14 +24,6 @@
   outline-offset: 3px;
 }
 
-.cta-button__arrow {
-  transition: transform 180ms ease;
-}
-
-.cta-button:hover .cta-button__arrow {
-  transform: translateX(3px);
-}
-
 .cta-button--primary {
   background: linear-gradient(135deg, #2677ff 0%, #7a5cff 100%);
   color: #ffffff;

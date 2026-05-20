@@ -1,11 +1,9 @@
 @if (external || href.startsWith('#')) {
   <a [class]="classes" [href]="href" [attr.aria-label]="ariaLabel || label">
     <span>{{ label }}</span>
-    <span class="cta-button__arrow" aria-hidden="true">-&gt;</span>
   </a>
 } @else {
   <a [class]="classes" [routerLink]="href" [attr.aria-label]="ariaLabel || label">
     <span>{{ label }}</span>
-    <span class="cta-button__arrow" aria-hidden="true">-&gt;</span>
   </a>
 }

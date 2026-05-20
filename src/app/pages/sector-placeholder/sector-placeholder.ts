@@ -45,6 +45,11 @@ export class SectorPlaceholder {
       subtitle: 'Pagina verticale predisposta per ordini programmati, fasce ritiro e organizzazione operativa.',
       focus: ['Ordini programmati', 'Fasce ritiro', 'Organizzazione cucina']
     },
+    ristorazione: {
+      title: 'ReSeevo per ristorazione',
+      subtitle: 'Pagina verticale predisposta per prenotazioni tavoli, turni, sale e flussi di servizio.',
+      focus: ['Prenotazioni tavoli', 'Turni e sale', 'Flussi di servizio']
+    },
     sectors: {
       title: 'Settori supportati da ReSeevo',
       subtitle: 'Area predisposta per raccogliere tutte le verticali future della piattaforma.',

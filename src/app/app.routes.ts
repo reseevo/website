@@ -42,6 +42,13 @@ export const routes: Routes = [
       )
   },
   {
+    path: 'ristorazione',
+    loadComponent: () =>
+      import('./pages/sector-placeholder/sector-placeholder').then(
+        (component) => component.SectorPlaceholder
+      )
+  },
+  {
     path: 'sectors',
     loadComponent: () =>
       import('./pages/sector-placeholder/sector-placeholder').then(

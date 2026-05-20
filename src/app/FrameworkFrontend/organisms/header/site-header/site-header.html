@@ -20,20 +20,18 @@
     <nav id="main-navigation" class="site-header__nav" [class.is-open]="isMenuOpen" aria-label="Navigazione principale">
       @for (item of navItems; track item.label) {
         @if (item.href.startsWith('#')) {
-          <a [href]="item.href" (click)="closeMenu()">{{ item.label }}</a>
+          <a [href]="item.href" (click)="navigateToSection($event, item.href)">{{ item.label }}</a>
         } @else {
           <a [routerLink]="item.href" (click)="closeMenu()">{{ item.label }}</a>
         }
       }
       <div class="site-header__mobile-actions">
-        <app-cta-button label="Richiedi una demo" href="#demo" />
-        <app-cta-button label="Accedi" href="#login" variant="secondary" />
+        <app-cta-button label="Richiedi una demo gratuita" href="#demo" (click)="closeMenu()" />
       </div>
     </nav>
 
     <div class="site-header__actions">
-      <app-cta-button label="Richiedi una demo" href="#demo" />
-      <a class="site-header__login" href="#login">Accedi</a>
+      <app-cta-button label="Richiedi una demo gratuita" href="#demo" />
     </div>
   </div>
 </header>
