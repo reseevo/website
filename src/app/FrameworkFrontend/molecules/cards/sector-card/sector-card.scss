@@ -1,10 +1,14 @@
 .sector-card {
   position: relative;
-  display: grid;
-  min-height: 15.5rem;
+  display: flex;
+  height: 100%;
+  min-height: 19.5rem;
+  flex-direction: column;
   overflow: hidden;
   border: 1px solid rgba(141, 164, 210, 0.2);
+  border-top: 0;
   border-radius: 1rem;
+  background: #061326;
   color: #ffffff;
   isolation: isolate;
   text-decoration: none;
@@ -21,91 +25,121 @@
 .sector-card__visual::before,
 .sector-card__visual::after,
 .sector-card__scene {
-  position: absolute;
   inset: 0;
 }
 
 .sector-card__visual {
+  position: relative;
+  display: block;
+  width: 100%;
+  min-height: 8.2rem;
+  flex: 0 0 8.2rem;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(141, 164, 210, 0.18);
+  border-radius: 1rem 1rem 0 0;
   background: linear-gradient(135deg, #22324f, #091426);
-  z-index: -2;
 }
 
 .sector-card__visual::before {
+  position: absolute;
   background:
-    linear-gradient(180deg, rgba(2, 8, 18, 0.02), rgba(2, 8, 18, 0.84)),
+    linear-gradient(180deg, rgba(2, 8, 18, 0), rgba(2, 8, 18, 0.12)),
     radial-gradient(circle at 28% 28%, rgba(255, 255, 255, 0.32), transparent 18%),
     linear-gradient(120deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 40px);
   content: "";
-  z-index: -1;
 }
 
 .sector-card__visual::after {
-  background: linear-gradient(180deg, transparent 35%, rgba(3, 10, 23, 0.94));
+  position: absolute;
+  background: linear-gradient(180deg, rgba(2, 8, 18, 0) 0%, rgba(2, 8, 18, 0.1) 100%);
   content: "";
 }
 
 .sector-card__scene {
+  position: absolute;
   opacity: 0.85;
 }
 
 .sector-card--padel .sector-card__scene {
   background:
-    linear-gradient(90deg, transparent 0 18%, rgba(255, 255, 255, 0.23) 18% 19%, transparent 19% 38%, rgba(255, 255, 255, 0.18) 38% 39%, transparent 39%),
-    linear-gradient(0deg, rgba(21, 205, 187, 0.5), transparent 45%),
-    radial-gradient(circle at 70% 28%, rgba(40, 143, 255, 0.8), transparent 28%);
+    url("/assets/mockups/padel.png") center center / cover no-repeat;
+  opacity: 1;
+  transform: scale(1.08);
+  filter: saturate(1.28) contrast(1.08) brightness(1.85);
+}
+
+.sector-card--padel .sector-card__scene {
+  inset: -2px;
+}
+
+.sector-card--padel .sector-card__visual::before {
+  background:
+    linear-gradient(180deg, rgba(2, 8, 18, 0), rgba(2, 8, 18, 0.08)),
+    linear-gradient(90deg, rgba(45, 212, 255, 0.04), transparent 48%);
+}
+
+.sector-card--padel .sector-card__visual::after {
+  background:
+    linear-gradient(180deg, rgba(2, 8, 18, 0) 0%, rgba(2, 8, 18, 0.08) 100%);
 }
 
 .sector-card--fitness .sector-card__scene {
   background:
-    radial-gradient(circle at 20% 72%, rgba(255, 121, 39, 0.9), transparent 24%),
-    linear-gradient(110deg, rgba(255, 255, 255, 0.08) 0 10%, transparent 10% 20%),
-    linear-gradient(135deg, rgba(90, 95, 130, 0.4), transparent);
+    url("/assets/mockups/palestre_fitness.png") center center / cover no-repeat;
+  opacity: 1;
+  inset: -2px;
+  transform: scale(1.06);
+  filter: saturate(1.18) contrast(1.06) brightness(1.34);
 }
 
 .sector-card--beauty .sector-card__scene {
   background:
-    radial-gradient(circle at 25% 25%, rgba(255, 210, 226, 0.86), transparent 22%),
-    radial-gradient(circle at 80% 52%, rgba(255, 82, 176, 0.55), transparent 25%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.22), transparent);
+    url("/assets/mockups/salone_beauty.png") center center / cover no-repeat;
+  opacity: 1;
+  inset: -2px;
+  transform: scale(1.06);
+  filter: saturate(1.12) contrast(1.04) brightness(1.16);
 }
 
 .sector-card--barber .sector-card__scene {
   background:
-    linear-gradient(115deg, rgba(255, 255, 255, 0.06) 0 18%, transparent 18% 34%, rgba(255, 255, 255, 0.08) 34% 45%, transparent 45%),
-    radial-gradient(circle at 76% 32%, rgba(112, 91, 255, 0.84), transparent 22%);
+    url("/assets/mockups/barberie.png") center center / cover no-repeat;
+  opacity: 1;
+  inset: -2px;
+  transform: scale(1.06);
+  filter: saturate(1.14) contrast(1.06) brightness(1.34);
 }
 
 .sector-card--takeaway .sector-card__scene {
   background:
-    radial-gradient(circle at 36% 42%, rgba(255, 190, 48, 0.9), transparent 18%),
-    radial-gradient(circle at 70% 58%, rgba(255, 80, 48, 0.65), transparent 22%),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.1), transparent);
+    url("/assets/mockups/take_away.png") center center / cover no-repeat;
+  opacity: 1;
+  inset: -2px;
+  transform: scale(1.06);
+  filter: saturate(1.16) contrast(1.05) brightness(1.34);
 }
 
 .sector-card--ristorazione .sector-card__scene {
   background:
-    radial-gradient(circle at 28% 36%, rgba(255, 190, 48, 0.82), transparent 18%),
-    radial-gradient(circle at 76% 52%, rgba(34, 197, 94, 0.62), transparent 23%),
-    linear-gradient(130deg, rgba(255, 255, 255, 0.11), transparent);
+    url("/assets/mockups/ristorazione.png") center center / cover no-repeat;
+  opacity: 1;
+  inset: -2px;
+  transform: scale(1.06);
+  filter: saturate(1.14) contrast(1.05) brightness(1.34);
 }
 
 .sector-card__content {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  min-height: 15.5rem;
-  padding: 1.1rem;
+  min-height: 11.3rem;
+  flex: 1;
+  justify-content: flex-start;
+  padding: 0.95rem 1.1rem 1.05rem;
+  background: linear-gradient(180deg, rgba(6, 19, 38, 0.98), rgba(3, 10, 23, 0.98));
 }
 
 .sector-card__icon {
-  display: grid;
-  width: 2.6rem;
-  height: 2.6rem;
-  margin-bottom: 0.85rem;
-  place-items: center;
-  border-radius: 0.9rem;
-  background: linear-gradient(135deg, #2677ff, #7a5cff);
-  font-weight: 900;
+  display: none;
 }
 
 strong {
@@ -120,7 +154,8 @@ span span {
 }
 
 em {
-  margin-top: 0.85rem;
+  margin-top: auto;
+  padding-top: 0.85rem;
   color: #9eb8ff;
   font-style: normal;
   font-weight: 800;
